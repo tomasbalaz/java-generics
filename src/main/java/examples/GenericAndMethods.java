@@ -2,10 +2,9 @@ package examples;
 
 public class GenericAndMethods {
     public static void main(String[] args) {
-        String ali = "Ali";
-        String[] names = {ali, "jamila"};
+        String[] names = {"Ali", "Jamila"};
         Character[] letters = {'A', 'B', 'C'};
-        Integer[] numbers = {1, 2, 4, 5, 5};
+        Integer[] numbers = {1, 2, 3};
 
         print(names);
         print(letters);
@@ -13,12 +12,12 @@ public class GenericAndMethods {
     }
 
     static <T> void print(T[] array) {
-        for (T e : array) {
+        for (T e :  array) {
             System.out.println(
                     e.getClass().getName() +
-                            " - " + e
+                            " - " +
+                            e
             );
         }
     }
-
 }
