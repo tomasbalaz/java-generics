@@ -1,6 +1,6 @@
 package examples;
 
-public class Box<T> {
+public class Box<T extends Comparable<T>> {
     
     private T t;
 
