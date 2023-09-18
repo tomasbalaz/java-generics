@@ -9,6 +9,15 @@ public class BoundedTypeParameter {
         System.out.println(countGreaterThan(numbers2, 0.0));
     }
 
+    interface A {}
+
+    interface B {}
+
+    // static <T extends Comparable<T>> int countGreaterThan(T[] numbers, T number) {
+    //static <T extends Comparable<T> & A & B> int countGreaterThan(T[] numbers, T number) {
+    // static <T extends Number & A & B> int countGreaterThan(T[] numbers, T number) {
+    //static <T extends Number & Comparable & A & B> int countGreaterThan(T[] numbers, T number) {
+
     static <T extends Comparable<T>> int countGreaterThan(T[] numbers, T number) {
 
         int count = 0;
